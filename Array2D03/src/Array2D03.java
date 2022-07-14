@@ -1,5 +1,5 @@
 
-// 문제1) A반 학생의 국어, 영어, 수학 점수를 저장하는 2차원 배열 scores를 사용하여, 각 학생의 과목 점수와 총점과 평균을 출력하시오
+
 /*
 93, 93, 92
 85, 85, 86
@@ -18,7 +18,9 @@ public class Array2D03 {
 				{68, 68, 67, 0},
 				{83, 93, 92, 0}
 		};
+		double[] ave = new double[5];
 		
+		/*
 		int sum = 0, count = 0;
 		double ave = 0.0;
 		
@@ -45,6 +47,25 @@ public class Array2D03 {
 			ave = (double)sum / scores[i].length;
 			System.out.printf("%d번째 학생의 평균: %.2f\n", (i+1), ave);
 			System.out.println();
+		}
+		*/
+		
+		//강사님 방법
+		for (int i =0; i <scores.length; i++) {
+			for(int j =0; j<scores[i].length-1; j++) {
+				scores[i][3] += scores[i][j];
+			}
+			ave[i] = scores[i][3] / 3.0;
+		}
+		
+		System.out.println("  번호 | 국어 | 영어   | 수학   | 총점  |  평균    |");
+		System.out.println("=====================================");
+		for(int i=0;i<scores.length;i++) {
+			System.out.printf(" %d번  |", i+1);
+			for(int j=0; j<scores[i].length; j++) {
+				System.out.printf("%3d | ", scores[i][j]);
+			}
+			System.out.printf("%.2f |\n", ave[i]);
 		}
 		
 	}
