@@ -1,4 +1,12 @@
-
+/*
+ <this의 사용법>
+ 1. this.멤버변수 -> 자신의 클래스 내에서 자신의 멤버변수를  참조하는 방법
+ 2. this() -> 자신의 클래스 내에서 생성자를 호출하는 방법
+ 
+ <this()사용하는 장점>
+ -코드를 간결하게 함
+ -멤버변수의 값을 하나의 생성자에서 값을 결정하도록 함 -> 멤버 변수의 값을 설정하는 곳이 1군데로 귀결됨
+ */
 class Day{
 	//멤버 변수
 	//초기값 설정
@@ -9,9 +17,7 @@ class Day{
 	
 	//복사생성자 -> 복사하기 위한 생성자
 	public Day(Day d) {
-		this.year = d.year;
-		this.month = d.month;
-		this.date = d.date;
+		this(d.year, d.month, d.date);
 	}
 	//매개변수를 갖지 않는 생성자 -> 디폴트 생성자
 	public Day() {
@@ -24,14 +30,13 @@ class Day{
 	
 	//매개변수를 2개 갖는 생성자
 	public Day(int year, int month) {
-		this.year = year;
+		this(year);
 		this.month = month;
 	}
 		
 	//매개변수를 3개 갖는 생성자
 	public Day(int year, int month, int date) {
-		this.year = year;
-		this.month = month;
+		this(year, month);
 		this.date = date;
 	}
 	
