@@ -8,7 +8,7 @@ public class Random01 {
 		//1. 0 ~ 9 사이의 난수
 		//int rn = (int)(Math.random() * 10);
 		
-		//2. 1 ~ 10 tkdldml skstn
+		//2. 1 ~ 10 사이의 난수
 		//int rn = (int)(Math.random() * 10) + 1;
 		
 		//3. 두 자리수의 난수, 10 ~ 99사이의 난수

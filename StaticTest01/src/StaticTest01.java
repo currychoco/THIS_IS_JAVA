@@ -9,11 +9,12 @@ class Static{
 	//클래스 메소드, 정적 메소드
 	public static void sm1() {	}
 	
+	//중요 - 클래스 메서드에서의 클래스 변수, 인스턴스 변수, 클래스 메서드, 인스턴스 메서드의 사용 가능 여부
 	public static void sm2(int x) {
-		s = x;
-		i = x;
-		sm1();
-		im1();
+		s = x;//클래스 변수는 사용 가능
+		//i = x;//인스턴스 변수는 사용 불가
+		sm1();//클래스 메서드는 사용 가능
+		//im1();//인스턴스 메서드는 사용 불가
 	}
 	
 	//인스턴스 메소드, 비정적 메소드
@@ -45,5 +46,10 @@ public class StaticTest01 {
 		s1.im2(10);
 		Static.sm2(20);
 		
+		System.out.println("s1의 i: " + s1.getI());
+		System.out.println("s2의 i: " + s2.getI());
+		System.out.println("s3의 i: " + s3.getI());
+		
+		System.out.println("Static의 s: " + Static.getS());
 	}
 }
