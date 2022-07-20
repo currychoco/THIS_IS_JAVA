@@ -1,0 +1,29 @@
+package test;
+
+import animal.*;
+
+public class AnimalTest01 {
+	public static void main(String[] args) {
+	
+		//´ÙÇü¼º ±¸Çö
+		Animal[] animals = new Animal[4];
+		animals[0] = new Dog("°ûµÎÃ¶", "Ä¡¿Í¿Í");
+		animals[1] = new Cat("±è´ö¹è", 19);
+		animals[2] = new Dog("ÀÌÃá»ï", "Æ÷¸Þ¶ó´Ï¾È");
+		animals[3] = new Cat("À±Ã¶Áß", 3);
+		
+		//Ãâ·Â ¹æ¹ý 1
+		for(int i = 0; i < animals.length; i++) {
+			animals[i].bark();
+			System.out.println(animals[i]);
+			System.out.println();
+		}
+		
+		//Ãâ·Â ¹æ¹ý 2
+		for(Animal a : animals) {
+			a.bark();
+			System.out.println(a);
+			System.out.println();
+		}
+	}
+}
