@@ -20,6 +20,8 @@ import calc.Calc;
  - private < default < protected < public
  - private: 같은 클래스 내에서만 접근가능
  - default: 멤버의 접근 권한을적지 않은 상태, 같은 패키지 내에서만 접근 가능
+ - protected: 같은 패키지에서는 물론이고, 패키지가 달라도 상속을 받았다면 접근 가능
+ - public: 어디에서나 접근 가능
  */
 
 public class PackageTest01 {	
