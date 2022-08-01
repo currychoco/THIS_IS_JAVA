@@ -21,7 +21,7 @@ public class URLTest3 {
 					break;
 				fw.write(lineStr+"\n");				
 			}	
-			System.out.println("duke.jpg가 성공적으로 생성되었습니다.");
+			System.out.println("weather.xml가 성공적으로 생성되었습니다.");
 		} catch (MalformedURLException e) {
 			System.out.println("URL문자열 오류 : "+e.getMessage());
 		} catch (IOException e) {
